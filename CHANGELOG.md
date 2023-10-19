@@ -1,3 +1,9 @@
+## v0.3.0 (2023-10-19)
+
+### Feat
+
+- add base param and deploy action
+
 ## v0.2.0 (2023-10-19)
 
 ### Feat
