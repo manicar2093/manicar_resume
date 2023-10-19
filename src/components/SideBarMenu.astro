@@ -1,20 +1,28 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
+const paths = [
+    {path: "", id: "home", text: "Home", isInternal: true},
+    {path: "blog", id: "blog", text: "Blog", isInternal: true},
+    {path: "cv", id: "cv", text: "Resume", isInternal: true},
+    {path: "https://www.linkedin.com/in/manuel-carbajal-7352b0173/", id: "contact", text: "Contacto", isInternal: false, target: "_blank"},
+]
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-    <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>
-    <li><a class="py-3 text-base" id="cv" href="/cv">Resume</a></li>
-    <li>
-        <a
-            class="py-3 text-base"
-            href="https://www.linkedin.com/in/manuel-carbajal-7352b0173/"
-            target="_blank"
-            referrerpolicy="no-referrer-when-downgrade">Contact</a
-        >
-    </li>
+    {
+        paths.map((data) =>
+            <li>
+                <a class="py-3 text-base"
+                    id={data.id}
+                    href={data.isInternal ? import.meta.env.BASE_URL + data.path : data.path}
+                    target={data.target ? data.target: ""}
+                >
+                    {data.text}
+                </a>
+            </li>
+        )
+    }
 </ul>
 
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
