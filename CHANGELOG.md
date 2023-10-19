@@ -1,3 +1,9 @@
+## v0.2.0 (2023-10-19)
+
+### Feat
+
+- add bump version action
+
 ## v0.1.0 (2023-10-19)
 
 ### Feat
