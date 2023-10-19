@@ -13,7 +13,7 @@ const last_posts = posts.slice(0, 3);
     <div class="text-5xl font-bold">Manuel Carbajal</div>
     <div class="text-3xl py-3 font-bold">Desarrollador Backend</div>
     <div class="mt-8">
-      <a class="btn btn-outline" href="/cv">Acá mi Curriculum</a>
+      <a class="btn btn-outline" href={import.meta.env.BASE_URL + "cv"}>Acá mi Curriculum</a>
       <a class="btn" href="https://github.com/stars/manicar2093/lists/my-golang-stack" target="_blank">Acá mi stack</a>
     </div>
   </div>
@@ -85,7 +85,7 @@ const last_posts = posts.slice(0, 3);
           title={post.data.title}
           img={post.data.heroImage}
           desc={post.data.description}
-          url={"/blog/" + post.slug}
+          url={"blog/" + post.slug}
           target="_self"
           badge={post.data.badge}
         />
