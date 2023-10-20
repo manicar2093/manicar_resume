@@ -1,3 +1,9 @@
+## v0.4.1 (2023-10-20)
+
+### Fix
+
+- add base url to lighting anchor
+
 ## v0.4.0 (2023-10-19)
 
 ### Feat
