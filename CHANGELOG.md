@@ -1,3 +1,9 @@
+## v0.4.2 (2023-11-08)
+
+### Fix
+
+- add is external link to horizontal card
+
 ## v0.4.1 (2023-10-20)
 
 ### Fix
